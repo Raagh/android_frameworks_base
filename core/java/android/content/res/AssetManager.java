@@ -646,6 +646,7 @@ public final class AssetManager implements AutoCloseable {
      *
      * {@hide}
      */
+<<<<<<< HEAD
      // TODO: change the signature of this method to match addOverlayPathNative
     public final int addOverlayPath(String idmapPath, String themeApkPath,
             String resApkPath, String targetPkgPath, String prefixPath) {
@@ -708,6 +709,19 @@ public final class AssetManager implements AutoCloseable {
     }
 
     private native final boolean removeOverlayPathNative(String packageName, int cookie);
+=======
+    public final int addOverlayPath(String idmapPath) {
+        synchronized (this) {
+            int res = addOverlayPathNative(idmapPath);
+            if (mStringBlocks != null) {
+                makeStringBlocks(mStringBlocks);
+            }
+            return res;
+        }
+    }
+
+    private native final int addOverlayPathNative(String idmapPath);
+>>>>>>> 3116d97... base: Fix the problems for runtime overlay.
 
     /**
      * Add multiple sets of assets to the asset manager at once.  See

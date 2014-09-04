@@ -2159,7 +2159,11 @@ static JNINativeMethod gAssetManagerMethods[] = {
         (void*) android_content_AssetManager_getAssetRemainingLength },
     { "addAssetPathNative", "(Ljava/lang/String;)I",
         (void*) android_content_AssetManager_addAssetPath },
+<<<<<<< HEAD
     { "addOverlayPathNative",   "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I",
+=======
+    { "addOverlayPathNative",   "(Ljava/lang/String;)I",
+>>>>>>> 3116d97... base: Fix the problems for runtime overlay.
         (void*) android_content_AssetManager_addOverlayPath },
     { "addCommonOverlayPathNative",   "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I",
         (void*) android_content_AssetManager_addCommonOverlayPath },
