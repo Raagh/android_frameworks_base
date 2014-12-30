@@ -450,6 +450,10 @@ final class ColorFade {
         if (!attachEglContext()) {
             return false;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4939fc4... services: clean up "services: fix memory leak in ColorFade"
         try {
             if (!mTexNamesGenerated) {
                 GLES20.glGenTextures(1, mTexNames, 0);
@@ -464,14 +468,20 @@ final class ColorFade {
             try {
                 SurfaceControl.screenshot(SurfaceControl.getBuiltInDisplay(
                         SurfaceControl.BUILT_IN_DISPLAY_ID_MAIN), s);
+                st.updateTexImage();
+                st.getTransformMatrix(mTexMatrix);
             } finally {
                 s.release();
+                st.release();
             }
 
+<<<<<<< HEAD
             st.updateTexImage();
             st.getTransformMatrix(mTexMatrix);
             st.release();
 
+=======
+>>>>>>> 4939fc4... services: clean up "services: fix memory leak in ColorFade"
             // Set up texture coordinates for a quad.
             // We might need to change this if the texture ends up being
             // a different size from the display for some reason.
