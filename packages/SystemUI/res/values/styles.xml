@@ -272,5 +272,4 @@
         <item name="android:windowEnterAnimation">@anim/zen_toast_enter</item>
         <item name="android:windowExitAnimation">@anim/zen_toast_exit</item>
     </style>
-
 </resources>
