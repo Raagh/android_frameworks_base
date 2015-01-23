@@ -87,11 +87,7 @@ public class GestureOverlayView extends FrameLayout {
     private final Rect mInvalidRect = new Rect();
     private final Path mPath = new Path();
     private boolean mGestureVisible = true;
-<<<<<<< HEAD
-    protected boolean mClearPerformedGesture = true;
     protected boolean mInputEnabled = true;
-=======
->>>>>>> parent of 7f16858... Base : Gesture Anywhere [1/2]
 
     private float mX;
     private float mY;
@@ -775,18 +771,7 @@ public class GestureOverlayView extends FrameLayout {
                 fireOnGesturePerformed();
 
                 mFadingHasStarted = false;
-<<<<<<< HEAD
-                if (mClearPerformedGesture) {
-                    mPath.rewind();
-                    mCurrentGesture = null;
-                    mPreviousWasGesturing = false;
-                } else
-                    mResetGesture = true;
-=======
-                mPath.rewind();
-                mCurrentGesture = null;
                 mPreviousWasGesturing = false;
->>>>>>> parent of 7f16858... Base : Gesture Anywhere [1/2]
                 setPaintAlpha(255);
             }
 
