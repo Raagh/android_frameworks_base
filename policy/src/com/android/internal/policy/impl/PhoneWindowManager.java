@@ -6246,15 +6246,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     /** {@inheritDoc} */
     @Override
     public void showBootMessage(final CharSequence msg, final boolean always) {
-<<<<<<< HEAD
-=======
-        final String installingMsg = mContext.getResources().getString(
-                      com.android.internal.R.string.android_installing_apk);
-        final int titleRes = (msg != null && msg.toString().contains(installingMsg)) ?
-                      R.string.android_installing_title :
-                      R.string.android_upgrading_title;
-
->>>>>>> 93dc468... policy: fix dexopt dialog on first installation
         mHandler.post(new Runnable() {
             @Override public void run() {
                 if (mBootMsgDialog == null) {
