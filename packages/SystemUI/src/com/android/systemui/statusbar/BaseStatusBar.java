@@ -19,9 +19,6 @@ package com.android.systemui.statusbar;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.TimeInterpolator;
-import android.annotation.ChaosLab;
-import android.annotation.ChaosLab.Classification;
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
 import android.app.Notification;
@@ -45,7 +42,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.ThemeConfig;
 import android.database.ContentObserver;
-import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -70,7 +66,6 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.IWindowManager;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -103,7 +98,6 @@ import com.android.systemui.SearchPanelView;
 import com.android.systemui.SwipeHelper;
 import com.android.systemui.SystemUI;
 import com.android.systemui.cm.SpamMessageProvider;
-import com.android.systemui.chaos.lab.gestureanywhere.GestureAnywhereView;
 import com.android.systemui.statusbar.NotificationData.Entry;
 import com.android.systemui.statusbar.appcirclesidebar.AppCircleSidebar;
 import com.android.systemui.statusbar.phone.KeyguardTouchDelegate;
@@ -233,6 +227,7 @@ public abstract class BaseStatusBar extends SystemUI implements
 
     protected int mZenMode;
 
+<<<<<<< HEAD
     protected AppCircleSidebar mAppCircleSidebar;
 
     @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
@@ -241,6 +236,8 @@ public abstract class BaseStatusBar extends SystemUI implements
     private ArrayList<String> mDndList;
     private ArrayList<String> mBlacklist;
 
+=======
+>>>>>>> parent of 7f16858... Base : Gesture Anywhere [1/2]
     // which notification is currently being longpress-examined by the user
     private NotificationGuts mNotificationGutsExposed;
 
@@ -2242,6 +2239,7 @@ public abstract class BaseStatusBar extends SystemUI implements
             // Ignore.
         }
     }
+<<<<<<< HEAD
 
     @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_METHOD)
     protected void addGestureAnywhereView() {
@@ -2311,4 +2309,6 @@ public abstract class BaseStatusBar extends SystemUI implements
 
         return lp;
     }
+=======
+>>>>>>> parent of 7f16858... Base : Gesture Anywhere [1/2]
 }
