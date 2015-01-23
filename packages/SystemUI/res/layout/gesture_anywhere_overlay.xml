@@ -24,7 +24,7 @@
     android:id="@+id/gesture_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="top|center"
+    android:layout_gravity="bottom|center"
     android:padding="24dp"
     android:textSize="18sp"
     android:textColor="#24a599"
@@ -34,7 +34,7 @@
             android:id="@+id/cancel_gesturing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|right"
+            android:layout_gravity="bottom|right"
             android:padding="15dp"
             android:clickable="true"
             android:src="@drawable/btn_ga_cancel_gesturing" />
