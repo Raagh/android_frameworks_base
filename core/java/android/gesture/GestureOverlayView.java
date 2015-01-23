@@ -497,7 +497,7 @@ public class GestureOverlayView extends FrameLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-		if (isEnabled()) {
+        if (isEnabled()) {
             final boolean cancelDispatch = (mIsGesturing || (mCurrentGesture != null &&
                     mCurrentGesture.getStrokesCount() > 0 && mPreviousWasGesturing)) &&
                     mInterceptEvents;
@@ -577,8 +577,6 @@ public class GestureOverlayView extends FrameLayout {
             setPaintAlpha(255);
             mIsFadingOut = false;
             mFadingHasStarted = false;
-            mPath.rewind();
-            mCurrentGesture = null;            
             removeCallbacks(mFadingOut);
         }
 
@@ -771,6 +769,8 @@ public class GestureOverlayView extends FrameLayout {
                 fireOnGesturePerformed();
 
                 mFadingHasStarted = false;
+                mPath.rewind();
+                mCurrentGesture = null;
                 mPreviousWasGesturing = false;
                 setPaintAlpha(255);
             }
