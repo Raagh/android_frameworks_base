@@ -846,15 +846,11 @@ bool AssetManager::appendPathToResTable(const asset_path& ap, size_t* entryIdx) 
     MY_TRACE_BEGIN(ap.path.string());
     Asset* idmap = openIdmapLocked(ap);
     ALOGV("Looking for resource asset in '%s'\n", ap.path.string());
-<<<<<<< HEAD
     if (!ap.resApkPath.isEmpty()) {
         // Avoid using prefix path in this case since the compiled resApk will simply have resources.arsc in it
         ass = const_cast<AssetManager*>(this)->openNonAssetInPathLocked("resources.arsc", Asset::ACCESS_BUFFER, ap, false);
         shared = false;
     } else if (ap.type != kFileTypeDirectory) {
-=======
-    if (ap.type != kFileTypeDirectory) {
->>>>>>> 3116d97... base: Fix the problems for runtime overlay.
         if (*entryIdx == 0) {
             // The first item is typically the framework resources,
             // which we want to avoid parsing every time.
@@ -886,11 +882,7 @@ bool AssetManager::appendPathToResTable(const asset_path& ap, size_t* entryIdx) 
                 // can quickly copy it out for others.
                 ALOGV("Creating shared resources for %s", ap.path.string());
                 sharedRes = new ResTable();
-<<<<<<< HEAD
                 sharedRes->add(ass, idmap, *entryIdx + 1, false, ap.pkgIdOverride);
-=======
-                sharedRes->add(ass, idmap, *entryIdx + 1, false);
->>>>>>> 3116d97... base: Fix the problems for runtime overlay.
 #ifdef HAVE_ANDROID_OS
                 const char* data = getenv("ANDROID_DATA");
                 LOG_ALWAYS_FATAL_IF(data == NULL, "ANDROID_DATA not set");
@@ -919,11 +911,7 @@ bool AssetManager::appendPathToResTable(const asset_path& ap, size_t* entryIdx) 
             mResources->add(sharedRes);
         } else {
             ALOGV("Parsing resources for %s", ap.path.string());
-<<<<<<< HEAD
             mResources->add(ass, idmap, *entryIdx + 1, !shared, ap.pkgIdOverride);
-=======
-            mResources->add(ass, idmap, *entryIdx + 1, !shared);
->>>>>>> 3116d97... base: Fix the problems for runtime overlay.
         }
         onlyEmptyResources = false;
 
