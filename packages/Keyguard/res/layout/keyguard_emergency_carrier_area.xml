@@ -37,8 +37,7 @@
         android:textStyle="bold"
         android:textSize="@dimen/keyguard_lockscreen_status_line_font_size"
         android:textColor="?android:attr/textColorPrimary"
-        android:visibility="gone"
-        android:textAllCaps="false" />
+        android:visibility="gone"/>
 
     <com.android.keyguard.EmergencyButton
         android:id="@+id/emergency_call_button"
@@ -52,7 +51,6 @@
         android:textStyle="bold"
         android:textSize="@dimen/keyguard_lockscreen_status_line_font_size"
         android:textColor="?android:attr/textColorPrimary"
-        android:drawablePadding="8dip"
-        android:textAllCaps="false" />
+        android:drawablePadding="8dip"/>
 
 </com.android.keyguard.EmergencyCarrierArea>
