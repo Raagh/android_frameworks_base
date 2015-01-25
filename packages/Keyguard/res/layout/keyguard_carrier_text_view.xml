@@ -40,7 +40,6 @@
         android:ellipsize="marquee"
         android:singleLine="true"
         android:textDirection = "locale"
-        android:textAllCaps="false"
         android:textStyle="bold"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="@dimen/keyguard_lockscreen_status_line_font_size"
@@ -55,7 +54,6 @@
         android:gravity="start"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:textAllCaps="false"
         android:textDirection = "locale"
         android:textStyle="bold"
         android:textColor="?android:attr/textColorPrimary"
@@ -78,14 +76,12 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="start"
-        android:textAllCaps="false"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:textDirection = "locale"
         android:textStyle="bold"
         android:textColor="?android:attr/textColorPrimary"
-        android:textSize="@dimen/keyguard_lockscreen_status_line_font_size"
-        android:visibility="gone" />
+        android:textSize="@dimen/keyguard_lockscreen_status_line_font_size"/>
 
     <TextView
         android:id="@+id/carrier_divider2"
@@ -103,7 +99,6 @@
         android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="start"
-        android:textAllCaps="false"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:textDirection = "locale"
