@@ -887,28 +887,22 @@ public class TaskStackView extends FrameLayout implements TaskStack.TaskStackCal
         /*
         // Stash the scroll and filtered task for us to restore to when we unfilter
         mStashedScroll = getStackScroll();
-
         // Calculate the current task transforms
         ArrayList<TaskViewTransform> curTaskTransforms =
                 getStackTransforms(curTasks, getStackScroll(), null, true);
-
         // Update the task offsets
         mLayoutAlgorithm.updateTaskOffsets(mStack.getTasks());
-
         // Scroll the item to the top of the stack (sans-peek) rect so that we can see it better
         updateMinMaxScroll(false);
         float overlapHeight = mLayoutAlgorithm.getTaskOverlapHeight();
         setStackScrollRaw((int) (newStack.indexOfTask(filteredTask) * overlapHeight));
         boundScrollRaw();
-
         // Compute the transforms of the items in the new stack after setting the new scroll
         final ArrayList<Task> tasks = mStack.getTasks();
         final ArrayList<TaskViewTransform> taskTransforms =
                 getStackTransforms(mStack.getTasks(), getStackScroll(), null, true);
-
         // Animate
         mFilterAlgorithm.startFilteringAnimation(curTasks, curTaskTransforms, tasks, taskTransforms);
-
         // Notify any callbacks
         mCb.onTaskStackFilterTriggered();
         */
@@ -920,26 +914,20 @@ public class TaskStackView extends FrameLayout implements TaskStack.TaskStackCal
         // Calculate the current task transforms
         final ArrayList<TaskViewTransform> curTaskTransforms =
                 getStackTransforms(curTasks, getStackScroll(), null, true);
-
         // Update the task offsets
         mLayoutAlgorithm.updateTaskOffsets(mStack.getTasks());
-
         // Restore the stashed scroll
         updateMinMaxScroll(false);
         setStackScrollRaw(mStashedScroll);
         boundScrollRaw();
-
         // Compute the transforms of the items in the new stack after restoring the stashed scroll
         final ArrayList<Task> tasks = mStack.getTasks();
         final ArrayList<TaskViewTransform> taskTransforms =
                 getStackTransforms(tasks, getStackScroll(), null, true);
-
         // Animate
         mFilterAlgorithm.startFilteringAnimation(curTasks, curTaskTransforms, tasks, taskTransforms);
-
         // Clear the saved vars
         mStashedScroll = 0;
-
         // Notify any callbacks
         mCb.onTaskStackUnfilterTriggered();
         */
